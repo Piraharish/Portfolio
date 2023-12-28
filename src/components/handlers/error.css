@@ -1,0 +1,14 @@
+/* -------  Error  ------- */
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.load_error {
+  text-align: center;
+  color: var(--color-light);
+  font-size: 1rem;
+}

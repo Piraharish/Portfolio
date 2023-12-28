@@ -1,0 +1,25 @@
+.swiper-container-modal {
+  width: 100%;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  color: var(--color-primary);
+  cursor: pointer;
+  background: transparent;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  color: var(--color-primary-variant);
+}

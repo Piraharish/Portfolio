@@ -1,0 +1,123 @@
+footer {
+  background: var(--color-primary);
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 7rem;
+}
+
+footer a {
+  color: var(--color-bg);
+}
+
+.footer__devby {
+  font-size: 0.9rem;
+  color: var(--color-bg);
+  margin-bottom: -0.7rem;
+  cursor: default;
+}
+
+.footer__dev {
+  font-size: 2.5rem;
+  color: var(--color-bg);
+  margin-bottom: 1rem;
+}
+
+footer img {
+  margin: auto;
+  margin-top: 1rem;
+  width: 13rem;
+  height: auto;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.permalinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto 1rem;
+  cursor: pointer;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__socials a {
+  background: var(--color-bg);
+  color: var(--color-white);
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  display: flex;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.footer__socials a:hover {
+  background: transparent;
+  color: var(--color-bg);
+  border-color: var(--color-bg);
+}
+
+.footer__socials a:focus {
+  border: 2px solid var(--color-white);
+}
+
+.footer__copyright {
+  margin-bottom: 3rem;
+  color: var(--color-bg);
+}
+
+/* --------- Scroll ---------- */
+
+.scroll__up {
+  position: absolute;
+  transform: rotate(270deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+  left: 83%;
+  cursor: pointer;
+}
+
+/* ----------- Media Queries (Medium Devices) ------------ */
+
+@media screen and (max-width: 1024px) {
+  footer img {
+    width: 35%;
+  }
+
+  .footer__copyright {
+    margin-bottom: 4rem;
+  }
+}
+
+/* ----------- Media Queries (Small Devices) ------------ */
+
+@media screen and (max-width: 600px) {
+  .permalinks {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__socials {
+    margin-bottom: 1.5rem;
+  }
+
+  footer img {
+    width: 30%;
+  }
+
+  .footer__copyright {
+    margin-bottom: 4rem;
+  }
+
+  .scroll__up {
+    display: none;
+  }
+}

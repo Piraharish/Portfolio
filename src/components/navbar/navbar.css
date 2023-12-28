@@ -1,0 +1,59 @@
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  padding: 0.7rem 0.7rem;
+  z-index: 2;
+  position: fixed;
+  transform: translateX(-50%);
+  display: flex;
+  left: 50%;
+  flex-direction: row;
+  top: 90%;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  transform: scale(1.23);
+}
+
+/* ----------- Media Queries (Medium Devices) ------------ */
+
+@media screen and (max-width: 1024px) {
+  nav {
+    padding: 0.7rem 0.5rem;
+    gap: 0.7rem;
+  }
+}
+
+/* ----------- Media Queries (Small Devices) ------------ */
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 0.5rem 0.5rem;
+    gap: 0.3rem;
+    left: 50%;
+    flex-direction: row;
+    top: 90%;
+  }
+}
