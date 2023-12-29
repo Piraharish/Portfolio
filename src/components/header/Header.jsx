@@ -6,13 +6,16 @@ import "./header.css";
 import { Link as ScrollLink } from "react-scroll";
 import { FiDownload } from "react-icons/fi";
 import HeaderSocials from "./HeaderSocials";
+import CV from "/Resume.pdf";
 import PropTypes from "prop-types";
 
 const CTA = ({ pdfUrl }) => {
   let cvUrl;
 
   if (pdfUrl) {
-    cvUrl = import.meta.env.VITE_APP_STRAPI_API_BASE_URL + pdfUrl;
+    cvUrl = pdfUrl;
+  } else {
+    cvUrl = CV;
   }
   return (
     <div className="cta">
@@ -91,10 +94,7 @@ const Header = () => {
 
         <div className="me">
           <img
-            src={
-              import.meta.env.VITE_APP_STRAPI_API_BASE_URL +
-              headerData?.Image?.data?.attributes?.url
-            }
+            src={headerData?.Image?.data?.attributes?.url}
             alt="me"
             className="me__image"
           />

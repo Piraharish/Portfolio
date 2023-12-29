@@ -31,15 +31,13 @@ const Footer = () => {
     return null;
   }
   const footerData = data?.data?.data?.[0]?.attributes || [];
-  const logoUrl =
-    import.meta.env.VITE_APP_STRAPI_API_BASE_URL +
-    footerData?.Logo?.data?.attributes?.url;
+  const logoUrl = footerData?.Logo?.data?.attributes?.url || logo;
 
   return (
     <footer id="footer">
       <h5 className="footer__devby">Developed by</h5>
       <ScrollLink to={"/"} smooth={true} spy={true}>
-        <img src={logoUrl || logo} alt="icon" />
+        <img src={logoUrl} alt="icon" />
       </ScrollLink>
       <h2 className="footer__dev">Piraharish</h2>
 

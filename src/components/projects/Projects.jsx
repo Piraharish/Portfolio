@@ -75,9 +75,7 @@ const Projects = () => {
               onClick={() => openModal(project)}
             >
               <img
-                src={`${import.meta.env.VITE_APP_STRAPI_API_BASE_URL}${
-                  project?.attributes?.image?.data?.attributes?.url
-                }`}
+                src={`${project?.attributes?.image?.data?.attributes?.url}`}
                 alt={`Project ${project?.id}`}
               />
               <IoMdPhotos className="photo__icon" />
@@ -128,9 +126,7 @@ const Projects = () => {
             selectedProject.map((imageData, index) => (
               <SwiperSlide key={index}>
                 <img
-                  src={`${import.meta.env.VITE_APP_STRAPI_API_BASE_URL}${
-                    imageData?.attributes?.url
-                  }`}
+                  src={`${imageData?.attributes?.url}`}
                   alt={`Image ${index + 1}`}
                   className="modal-image"
                 />

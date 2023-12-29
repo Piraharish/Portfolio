@@ -19,9 +19,7 @@ const About = () => {
     return null;
   }
   const aboutData = data?.data?.data?.[0]?.attributes;
-  const aboutImage =
-    import.meta.env.VITE_APP_STRAPI_API_BASE_URL +
-    aboutData?.About_Image?.data?.attributes?.url;
+  const aboutImage = aboutData?.About_Image?.data?.attributes?.url;
   const aboutParagraph = aboutData?.aboutParagraph?.[0]?.paragraph || [];
 
   return (

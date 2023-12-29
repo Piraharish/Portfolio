@@ -36,9 +36,7 @@ const Courses = () => {
           <SwiperSlide className="courses" key={course.id}>
             <div className="course__avatar">
               <img
-                src={`${import.meta.env.VITE_APP_STRAPI_API_BASE_URL}${
-                  course?.attributes?.Avatar?.data?.attributes?.url
-                }`}
+                src={`${course?.attributes?.Avatar?.data?.attributes?.url}`}
                 alt={`Course Avatar ${course.id}`}
               />
             </div>
